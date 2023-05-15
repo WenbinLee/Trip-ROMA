@@ -1,0 +1,45 @@
+name: simclr_roma
+dataset:
+  name: cifar10
+  image_size: 32
+  num_workers: 4
+
+model:
+  name: simclr
+  backbone: resnet18_cifar_variant
+
+train:
+  optimizer:
+    name: sgd
+    weight_decay: 0.0005
+    momentum: 0.9
+  warmup_epochs: 10
+  warmup_lr: 0
+  base_lr: 0.03
+  final_lr: 0
+  num_epochs: 1000 # this parameter influence the lr decay
+  stop_at_epoch: 1000 # has to be smaller than num_epochs
+  batch_size: 512
+  knn_monitor: False # knn monitor will take more time
+  knn_interval: 1
+  knn_k: 200
+  random_matrix_epoch_interval: 10
+eval: # linear evaluation, False will turn off automatic evaluation after training
+  optimizer:
+    name: sgd
+    weight_decay: 0
+    momentum: 0.9
+  warmup_lr: 0
+  warmup_epochs: 0
+  base_lr: 30
+  final_lr: 0
+  batch_size: 128
+  num_epochs: 100
+  num_classes: 10
+  linear_interval: 500
+
+logger:
+  tensorboard: False
+  matplotlib: False
+
+seed: null

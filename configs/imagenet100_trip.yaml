@@ -1,0 +1,46 @@
+name: trip
+dataset:
+  name: imagenet
+  image_size: 224
+  num_workers: 16
+
+model:
+  name: trip
+  backbone: resnet50
+  proj_layers: 3
+
+train:
+  optimizer:
+    name: sgd
+    weight_decay: 0.0001
+    momentum: 0.9
+  warmup_epochs: 0
+  warmup_lr: 0
+  base_lr: 0.2
+  final_lr: 0
+  num_epochs: 200 # this parameter influence the lr decay
+  stop_at_epoch: 200 # has to be smaller than num_epochs
+  batch_size: 128
+  knn_monitor: False # knn monitor will take more time
+  knn_interval: 5
+  knn_k: 20
+  random_matrix_epoch_interval: 1
+eval: # linear evaluation, False will turn off automatic evaluation after training
+  optimizer:
+    name: sgd
+    weight_decay: 0
+    momentum: 0.9
+  warmup_lr: 0
+  warmup_epochs: 0
+  base_lr: 30
+  final_lr: 0
+  batch_size: 128
+  num_epochs: 100
+  num_classes: 100
+  linear_interval: 10
+
+logger:
+  tensorboard: False
+  matplotlib: False
+
+seed: null

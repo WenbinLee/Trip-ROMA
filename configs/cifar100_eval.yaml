@@ -1,0 +1,26 @@
+name: eval
+
+model:
+  name: simclr
+  backbone: resnet18_cifar_variant
+
+dataset:
+  name: cifar100
+  image_size: 32
+  num_workers: 8
+
+eval: # linear evaluation, False will turn off automatic evaluation after training
+  optimizer:
+    name: sgd
+    weight_decay: 0
+    momentum: 0.9
+  warmup_lr: 0
+  warmup_epochs: 0
+  base_lr: 30
+  final_lr: 0
+  batch_size: 128
+  num_epochs: 100
+  num_classes: 100
+  linear_interval: 500
+
+seed: null
