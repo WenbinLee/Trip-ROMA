@@ -2,7 +2,7 @@
 ## Trip-ROMA: Self-Supervised Learning with Triplets and Random Mappings
 This is a PyTorch implementation of the [Trip-ROMA paper](https://openreview.net/forum?id=MR4glug5GU).
 
-![FlowChart-1](https://github.com/yangcedrus/Trip-ROMA/assets/32017755/77e5b185-527c-4a07-886e-a67634dcd071)
+<img src='flowchart.png' width=600/>
 
 ### Dependencies
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 title={Trip-{ROMA}: Self-Supervised Learning with Triplets and Random Mappings},
 author={Wenbin Li, Xuesong Yang, Meihao Kong, Lei Wang, Jing Huo, Yang Gao, Jiebo Luo},
 journal={Transactions on Machine Learning Research},
-year={2022}
+year={2023}
 }
 ```
 
