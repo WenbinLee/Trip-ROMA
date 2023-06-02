@@ -1,6 +1,6 @@
 
 ## Trip-ROMA: Self-Supervised Learning with Triplets and Random Mappings
-This is a PyTorch implementation of the [Trip-ROMA paper](https://openreview.net/forum?id=MR4glug5GU).
+This is a PyTorch implementation of the [Trip-ROMA](https://openreview.net/forum?id=MR4glug5GU) paper.
 
 <img src='flowchart.png' width=600/>
 
