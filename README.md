@@ -39,10 +39,12 @@ pip install -r requirements.txt
 ### Citation
 
 ```
-@article{li2022triproma,
+@article{
+li2023triproma,
 title={Trip-{ROMA}: Self-Supervised Learning with Triplets and Random Mappings},
-author={Wenbin Li, Xuesong Yang, Meihao Kong, Lei Wang, Jing Huo, Yang Gao, Jiebo Luo},
+author={Wenbin Li and Xuesong Yang and Meihao Kong and Lei Wang and Jing Huo and Yang Gao and Jiebo Luo},
 journal={Transactions on Machine Learning Research},
+issn={2835-8856},
 year={2023}
 }
 ```
